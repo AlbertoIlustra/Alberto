@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio | Alberto Ilidio Taimo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: { extend: {
+    colors: { brand: { 500:'#22c55e', 600:'#16a34a', 700:'#15803d' } },
+    fontFamily: { sans:['Inter','sans-serif'] }
+  }}
+}
+</script>
+<style>
+body{font-family:'Inter',sans-serif}
+.glass-card{background:rgba(255,255,255,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.dark .glass-card{background:rgba(17,24,39,.72)}
+.gradient-text{background:linear-gradient(135deg,#22c55e 0%,#3b82f6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.project-image{transition:transform .5s ease}
+.project-card:hover .project-image{transform:scale(1.025)}
+.modal-open{overflow:hidden}
+</style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-300">
+
+<div id="toast" class="fixed top-5 right-5 z-[70] translate-y-[-100px] opacity-0 transition-all duration-300 bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-xl flex items-center gap-3">
+<i class="fa-solid fa-circle-check"></i><span id="toast-msg">Mensagem enviada!</span>
+</div>
+
+<header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<a href="#" class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 p-0.5 shadow-md">
+<div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-white font-extrabold tracking-tight">AT</div></div>
+<span class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">Alberto <span class="text-emerald-500">Ilidio Taimo</span></span>
+</a>
+
+<nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600 dark:text-slate-300">
+<a href="#sobre" class="hover:text-emerald-500 transition">Sobre Mim</a>
+<a href="#projetos" class="hover:text-emerald-500 transition">Projetos</a>
+<a href="#servicos" class="hover:text-emerald-500 transition">Serviços</a>
+<a href="#contato" class="hover:text-emerald-500 transition">Contato</a>
+</nav>
+
+<div class="flex items-center gap-3">
+<a href="#contato" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-md transition-all hover:scale-105">
+<i class="fa-brands fa-whatsapp text-lg"></i><span>Falar Comigo</span>
+</a>
+<button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300"><i class="fa-solid fa-bars text-xl"></i></button>
+</div>
+</div>
+
+<div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 pt-2 pb-6 space-y-3">
+<a href="#sobre" class="block py-2 font-medium">Sobre Mim</a>
+<a href="#projetos" class="block py-2 font-medium">Projetos</a>
+<a href="#servicos" class="block py-2 font-medium">Serviços</a>
+<a href="#contato" class="block py-2 font-medium">Contato</a>
+</div>
+</header>
+
+<section id="sobre" class="relative py-16 lg:py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 text-sm font-semibold border border-emerald-200 dark:border-emerald-800">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Disponível para novos projetos
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+Transformando ideias em <span class="gradient-text">designs que comunicam</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+Designer Gráfico especializado em identidade visual, branding, peças publicitárias, social media e design de embalagem. Cada projeto é desenvolvido para comunicar uma ideia com clareza, personalidade e impacto visual.
+</p>
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+<a href="#contato" class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-lg transition-all flex items-center gap-2">
+<i class="fa-brands fa-whatsapp text-xl"></i><span>Iniciar Projeto no WhatsApp</span>
+</a>
+<a href="#projetos" class="px-6 py-3.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-semibold transition">Ver Portfólio</a>
+</div>
+<div class="pt-6 flex items-center justify-center lg:justify-start gap-4 text-slate-500 dark:text-slate-400">
+<span class="text-sm font-medium">Redes Sociais:</span>
+<a href="https://instagram.com/Albertdesign258" target="_blank" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:text-pink-500 transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+<a href="https://facebook.com" target="_blank" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:text-blue-600 transition"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+</div>
+</div>
+
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+<div class="absolute inset-0 bg-gradient-to-tr from-emerald-500 to-cyan-500 rounded-3xl blur-2xl opacity-20"></div>
+<div class="relative w-full h-full rounded-3xl border-2 border-slate-200 dark:border-slate-700 overflow-hidden shadow-2xl bg-white dark:bg-slate-800">
+<img src="assets/alberto-ilidio-taimo.jpg" alt="Alberto Ilidio Taimo" class="w-full h-full object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projetos" class="py-16 bg-white dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Projetos em Destaque</h2>
+<p class="text-slate-600 dark:text-slate-400">Uma seleção de trabalhos reais de identidade visual, branding, embalagem e design para comunicação digital.</p>
+<p class="text-sm text-emerald-600 dark:text-emerald-400 font-medium">Clique em qualquer projeto para visualizar a arte em tamanho maior.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+<!-- NOVAÉ -->
+<article class="project-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<button onclick="openProject('assets/novae.jpg','NOVAÉ — Identidade Visual & Branding')" class="w-full relative aspect-square overflow-hidden bg-slate-200 dark:bg-slate-700 text-left">
+<img src="assets/novae.jpg" alt="Projeto NOVAÉ" class="project-image w-full h-full object-cover">
+<div class="absolute inset-0 bg-slate-950/0 hover:bg-slate-950/35 transition flex items-center justify-center">
+<span class="opacity-0 hover:opacity-100 bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow-lg"><i class="fa-solid fa-expand mr-2"></i>Ver projeto</span>
+</div>
+</button>
+<div class="p-6 space-y-3">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Identidade Visual • Moda</span>
+<h3 class="text-2xl font-bold">NOVAÉ — Identidade Visual & Branding</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Desenvolvimento de uma identidade visual premium para uma marca de moda urbana. O projeto reúne logotipo, versão secundária, paleta cromática, tipografia e aplicações em embalagens, etiquetas, vestuário, publicidade exterior e redes sociais.</p>
+<div class="flex flex-wrap gap-2 text-xs font-medium"><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Branding</span><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Logo</span><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Mockups</span></div>
+</div>
+</article>
+
+<!-- LUMORA -->
+<article class="project-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<button onclick="openProject('assets/lumora.jpg','LUMORA — Identidade Visual & Branding')" class="w-full relative aspect-square overflow-hidden bg-slate-200 dark:bg-slate-700 text-left">
+<img src="assets/lumora.jpg" alt="Projeto LUMORA" class="project-image w-full h-full object-cover">
+<div class="absolute inset-0 bg-slate-950/0 hover:bg-slate-950/35 transition flex items-center justify-center">
+<span class="opacity-0 hover:opacity-100 bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow-lg"><i class="fa-solid fa-expand mr-2"></i>Ver projeto</span>
+</div>
+</button>
+<div class="p-6 space-y-3">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Identidade Visual • Beleza</span>
+<h3 class="text-2xl font-bold">LUMORA — Identidade Visual & Branding</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Construção de uma identidade de marca para o segmento de beleza e cuidados pessoais, com linguagem elegante e natural. O sistema visual inclui símbolo, tipografia, paleta de cores e aplicações para embalagens, vestuário, publicidade e conteúdo digital.</p>
+<div class="flex flex-wrap gap-2 text-xs font-medium"><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Branding</span><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Direção de Arte</span><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Social Media</span></div>
+</div>
+</article>
+
+<!-- JASPE -->
+<article class="project-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<button onclick="openProject('assets/jaspe.png','Jaspe — Design de Embalagem e Rótulo')" class="w-full relative aspect-[5/4] overflow-hidden bg-slate-200 dark:bg-slate-700 text-left">
+<img src="assets/jaspe.png" alt="Projeto Jaspe" class="project-image w-full h-full object-cover">
+<div class="absolute inset-0 bg-slate-950/0 hover:bg-slate-950/35 transition flex items-center justify-center">
+<span class="opacity-0 hover:opacity-100 bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow-lg"><i class="fa-solid fa-expand mr-2"></i>Ver projeto</span>
+</div>
+</button>
+<div class="p-6 space-y-3">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Design de Embalagem • Cosméticos</span>
+<h3 class="text-2xl font-bold">Jaspe — Rótulo & Apresentação de Produto</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Criação de uma solução visual para um óleo capilar, trabalhando hierarquia de informação, composição, ingredientes, benefícios, modo de uso e apresentação do produto. O projeto também explora a aplicação do rótulo em mockup para apresentação comercial.</p>
+<div class="flex flex-wrap gap-2 text-xs font-medium"><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Embalagem</span><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Rótulo</span><span class="px-2.5 py-1 rounded-full bg-white dark:bg-slate-900">Mockup</span></div>
+</div>
+</article>
+
+<!-- DESIGN CRIATIVO -->
+<article class="project-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<button onclick="openProject('assets/design-criativo.png','Design Criativo — Peça para Redes Sociais')" class="w-full relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-slate-700 text-left">
+<img src="assets/design-criativo.png" alt="Design Criativo" class="project-image w-full h-full object-cover">
+<div class="absolute inset-0 bg-slate-950/0 hover:bg-slate-950/35 transition flex items-center justify-center">
+<span class="opacity-0 hover:opacity-100 bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow-lg"><i class="fa-solid fa-expand mr-2"></i>Ver projeto</span>
+</div>
+</button>
+<div class="p-6 space-y-3">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Social Media • Design Gráfico</span>
+<h3 class="text-2xl font-bold">Design Criativo — Peça de Comunicação</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Composição gráfica desenvolvida para transmitir uma mensagem de forma visualmente marcante. O trabalho combina tipografia expressiva, tratamento de imagem, contraste, formas geométricas e elementos de identidade para criar uma peça com forte presença digital.</p>
+</div>
+</article>
+
+<!-- NOVO MÊS -->
+<article class="project-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<button onclick="openProject('assets/novo-mes.png','Novo Mês — Campanha para Redes Sociais')" class="w-full relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-slate-700 text-left">
+<img src="assets/novo-mes.png" alt="Campanha Novo Mês" class="project-image w-full h-full object-cover">
+<div class="absolute inset-0 bg-slate-950/0 hover:bg-slate-950/35 transition flex items-center justify-center">
+<span class="opacity-0 hover:opacity-100 bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow-lg"><i class="fa-solid fa-expand mr-2"></i>Ver projeto</span>
+</div>
+</button>
+<div class="p-6 space-y-3">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Social Media • Campanha</span>
+<h3 class="text-2xl font-bold">Novo Mês — Campanha Visual</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Peça temática criada para comunicar o início de um novo mês de forma energética e contemporânea. A composição utiliza cor, tipografia de impacto, tratamento fotográfico e elementos 3D para construir profundidade e chamar atenção no feed.</p>
+</div>
+</article>
+
+<!-- SETEMBRO -->
+<article class="project-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<button onclick="openProject('assets/setembro.png','Setembro — Conteúdo Visual para Redes Sociais')" class="w-full relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-slate-700 text-left">
+<img src="assets/setembro.png" alt="Projeto Setembro" class="project-image w-full h-full object-cover">
+<div class="absolute inset-0 bg-slate-950/0 hover:bg-slate-950/35 transition flex items-center justify-center">
+<span class="opacity-0 hover:opacity-100 bg-white text-slate-900 px-4 py-2 rounded-full font-semibold shadow-lg"><i class="fa-solid fa-expand mr-2"></i>Ver projeto</span>
+</div>
+</button>
+<div class="p-6 space-y-3">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Social Media • Conteúdo Visual</span>
+<h3 class="text-2xl font-bold">Setembro — Conteúdo Visual</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Arte vertical para comunicação em redes sociais, explorando uma linguagem visual forte, contraste cromático, composição central e elementos gráficos para apresentar uma mensagem de forma rápida e memorável.</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="servicos" class="py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Serviços</h2>
+<p class="mt-3 text-slate-600 dark:text-slate-400">Soluções visuais para marcas, negócios e comunicação digital.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-pen-nib text-2xl text-emerald-500"></i><h3 class="font-bold mt-4">Identidade Visual</h3><p class="text-sm text-slate-500 mt-2">Logotipos, paletas, tipografia e sistemas de marca.</p></div>
+<div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-box-open text-2xl text-emerald-500"></i><h3 class="font-bold mt-4">Design de Embalagem</h3><p class="text-sm text-slate-500 mt-2">Rótulos, embalagens e apresentações de produto.</p></div>
+<div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-hashtag text-2xl text-emerald-500"></i><h3 class="font-bold mt-4">Social Media</h3><p class="text-sm text-slate-500 mt-2">Posts, campanhas e peças visuais para redes sociais.</p></div>
+<div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-wand-magic-sparkles text-2xl text-emerald-500"></i><h3 class="font-bold mt-4">Direção de Arte</h3><p class="text-sm text-slate-500 mt-2">Conceito, composição e linguagem visual para projetos.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contato" class="py-16 lg:py-24 relative">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/80 shadow-2xl overflow-hidden p-8 sm:p-12">
+<div class="text-center max-w-xl mx-auto space-y-4 mb-8">
+<div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 flex items-center justify-center"><i class="fa-brands fa-whatsapp text-3xl"></i></div>
+<h2 class="text-3xl font-extrabold">Vamos trabalhar juntos?</h2>
+<p class="text-slate-600 dark:text-slate-400">Envie os detalhes do seu projeto e abra uma conversa diretamente no WhatsApp.</p>
+</div>
+<form id="whatsapp-form" onsubmit="sendWhatsAppMessage(event)" class="space-y-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div><label class="block text-sm font-semibold mb-2">Seu Nome</label><input type="text" id="contact-name" required placeholder="Digite seu nome" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-emerald-500"></div>
+<div><label class="block text-sm font-semibold mb-2">WhatsApp</label><input type="text" value="85 757 5699" readonly class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 font-medium"></div>
+</div>
+<div><label class="block text-sm font-semibold mb-2">Serviço Desejado</label>
+<select id="contact-service" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 outline-none">
+<option>Identidade Visual / Branding</option><option>Design de Embalagem</option><option>Social Media / Artes</option><option>Direção de Arte</option><option>Outro Serviço</option>
+</select></div>
+<div><label class="block text-sm font-semibold mb-2">Detalhes do Projeto</label><textarea id="contact-message" rows="4" required placeholder="Conte um pouco sobre o seu projeto..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-emerald-500 resize-none"></textarea></div>
+<button type="submit" class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg shadow-xl transition-all flex items-center justify-center gap-3"><i class="fa-brands fa-whatsapp text-2xl"></i>Enviar via WhatsApp</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer class="bg-slate-900 text-slate-400 py-12">
+<div class="max-w-7xl mx-auto px-4 text-center space-y-5">
+<div class="text-white font-bold text-xl">Alberto <span class="text-emerald-500">Ilidio Taimo</span></div>
+<p class="text-sm">Design Gráfico • Identidade Visual • Embalagem • Social Media</p>
+<div class="flex justify-center gap-6 text-xl">
+<a href="https://wa.me/258857575699" class="hover:text-emerald-400"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://instagram.com/Albertdesign258" target="_blank" class="hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://facebook.com" target="_blank" class="hover:text-blue-500"><i class="fa-brands fa-facebook-f"></i></a>
+</div>
+</div>
+</footer>
+
+<!-- Visualização ampliada -->
+<div id="project-modal" class="hidden fixed inset-0 z-[80] bg-black/90 p-4 sm:p-8 flex items-center justify-center" onclick="closeProject(event)">
+<div class="relative max-w-6xl w-full h-full flex flex-col items-center justify-center">
+<button onclick="closeProject()" class="absolute top-2 right-2 sm:top-0 sm:right-0 z-10 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+<p id="modal-title" class="text-white font-bold text-lg mb-4 text-center"></p>
+<div class="flex-1 min-h-0 w-full flex items-center justify-center">
+<img id="modal-image" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+</div>
+</div>
+</div>
+
+<script>
+const menuBtn=document.getElementById('mobile-menu-btn');
+const mobileMenu=document.getElementById('mobile-menu');
+menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+
+function openProject(src,title){
+  const modal=document.getElementById('project-modal');
+  document.getElementById('modal-image').src=src;
+  document.getElementById('modal-image').alt=title;
+  document.getElementById('modal-title').textContent=title;
+  modal.classList.remove('hidden');
+  document.body.classList.add('modal-open');
+}
+function closeProject(e){
+  if(e && e.target && e.target.id!=='project-modal' && !e.target.closest('button')) return;
+  document.getElementById('project-modal').classList.add('hidden');
+  document.body.classList.remove('modal-open');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeProject()});
+
+function sendWhatsAppMessage(event){
+  event.preventDefault();
+  const name=document.getElementById('contact-name').value.trim();
+  const service=document.getElementById('contact-service').value;
+  const message=document.getElementById('contact-message').value.trim();
+  if(!name||!message) return;
+  const text=`Olá! Meu nome é *${name}*.\n*Serviço de interesse:* ${service}\n\n*Mensagem:* ${message}`;
+  const url=`https://wa.me/258857575699?text=${encodeURIComponent(text)}`;
+  window.open(url,'_blank');
+}
+</script>
+</body>
+</html>
